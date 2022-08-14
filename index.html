@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <title>Домино Пасьянс</title>
+
+    <style type="text/css">
+        html,
+        body {
+            font-family: monospace;
+            height: 100%;
+            width: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        #idDivForRules {
+            background-color: #ffece3;
+        }
+
+        p {
+            padding-left: 2%;
+            text-indent: 4%;
+        }
+
+        #idLastParagraph {
+            padding-bottom: 1%;
+        }
+
+        .classButtonText {
+             color: #be0000;
+        }
+
+        .classTextPuzzleName {
+            text-align: center;
+            background-color: #90ee90;     
+        }
+    </style>
+</head>
+
+<body>
+    <div class="classTextPuzzleName" id="idDivTextPuzzleName"><b>Домино-пасьянс</b>, правила ниже</div>
+    
+    <svg id="idShowMainGame"></svg>
+
+    <div id="idDivForRules">
+        <div class="classTextPuzzleName">Правила пасьянса:</div>
+        <p>Цель - объединить все костяшки домино в <b>многоугольник: </b>единую (связную по сторонам) область без "дырок". Делая ходы, надо соблюдать принцип домино. Хотя бы один <b>квадрат</b> на сдвинутом домино должен прикоснуться к квадрату на соседней костяшке соответствующей цифрой.</p>
+        
+        <p>Ход - это <b>сдвиг</b> костяшки домино в продольном направлении. То есть, вертикальные доминошки скользят вверх-вниз, а горизонтальные - вправо-влево. Перепрыгивать через другие костяшки нельзя. Игра идёт на квадратном поле 11*11 клеток. Все 28 доминошек должны находиться в границах поля.</p>
+
+        <p>Управление отдельными щелчками: <b>сначала жмите на домино</b>, которое Вы выбрали. Затем жмите на клетку, куда Вы хотите пойти. Доминошки, которые имеют возможность хода, имеют особый цвет. Все разрешённые ходы отмечены стрелками.</p>
+        
+        <p id="idLastParagraph">В углах находятся <b class="classButtonText">кнопки</b> управления. Нажатие <b class="classButtonText">"<<"</b> вернёт расклад в начальную позицию. Нажатие <b class="classButtonText">"F5"</b> создаст новый расклад. Нажатие <b class="classButtonText">"-1"</b> отменит ход. Нажатие <b class="classButtonText">"i"</b> прокрутит стриницу страницу к правилам. Когда пасьянс сойдётся, всё игровое поле изменит цвет.</p>
+    </div>
+
+    <script src="js_01_view_setting.js"></script>
+    <script src="js_02_math.js"></script>
+    <script src="js_03_F_XY.js"></script>
+    <script src="js_04_F_AB.js"></script>
+    <script src="js_05_elements.js"></script>
+    <script src="js_06_AB.js"></script>
+    <script src="js_07_CSS_f_gen_style.js"></script>
+    <script src="js_08_draw_domino.js"></script>
+    <script src="js_09_draw_grid_of_cells.js"></script>
+    <script src="js_10_draw_arrow.js"></script>
+    <script src="js_11_game_start_position.js"></script>
+    <script src="js_12_F_BOARD_simple.js"></script>
+    <script src="js_13_F_BOARD_complicated.js"></script>
+    <script src="js_14_F_BOARD_is_victory.js"></script>
+    <script src="js_15_F_BOARD_legal_moves.js"></script>
+    <script src="js_16_icons_F5_and_BACK.js"></script>
+    <script src="js_17_F_BOARD_svg_draw.js"></script>
+    <script src="js_18_selection_objest.js"></script>
+    <script src="js_19_interact.js"></script>
+        
+</body>
+
+</html>
